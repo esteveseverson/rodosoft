@@ -34,9 +34,9 @@ def login():
     boxLogin = driver.find_element(By.XPATH, "//input[@id='login']")
     boxPassword = driver.find_element(By.XPATH, "//input[@id='password']")
     btnLogin = driver.find_element(By.XPATH, "//input[@class='btn btn-block btn-lg btn-danger']")
-    boxKey.send_keys("")
-    boxLogin.send_keys("")
-    boxPassword.send_keys("")
+    boxKey.send_keys("835")
+    boxLogin.send_keys("10035430")
+    boxPassword.send_keys("09507706631")
     sleep(0.5)
     btnLogin.click()
     driver.get('http://backofficevendaembarcada.rodosoft.com.br/Pages/Operacoes')
@@ -51,7 +51,7 @@ def search():
     boxService.send_keys(CORRIDA_ID)
     boxDate.clear()
     boxDate.send_keys(DATA_SERVIÇO)
-    sleep(0.5)
+    sleep(0.2)
     btnSearch.click()
     sleep(0.5)
 
@@ -116,8 +116,3 @@ for line in pageServices.iter_rows(min_row=2, values_only=True):
 renameAndMoveFile()
 
 generateNewFile()
-
-root = tk.Tk()
-root.withdraw()
-messageEnd()
-root.destroy()
