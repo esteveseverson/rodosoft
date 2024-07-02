@@ -20,8 +20,6 @@ import openpyxl
 import openpyxl.workbook
 import os
 import shutil
-import tkinter as tk
-from tkinter import messagebox
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from time import sleep
@@ -86,8 +84,6 @@ def generateNewFile():
     sheet.append(headers)
     newFile.save('planilhaDiariaMonitriip.xlsx')
 
-def messageEnd():
-    messagebox.showinfo("Aplicação finalizada com sucesso")
 
 # 1 - Entrar na planilha
 
